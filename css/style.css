@@ -7,16 +7,10 @@
 
 /* LAYOUT CLASSES */
 
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 30px;
-}
-
+.container, 
 .sm-container{
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 30px 0;
+    width: 100%;
+    padding: 30px;
 }
 
 .row{
@@ -123,7 +117,8 @@ img{
 #testimonials .col,
 #benefits .col-title,
 #benefits .col,
-#about .col,
+#about .col-testo,
+#about .col-img,
 #get-started .col,
 footer .col{
     width: 100%;
@@ -157,14 +152,21 @@ footer .col{
 
 #jumbotron p,
 #planning p,
-#testimonials p{
+#testimonials p,
+#benefits p,
+#about p{
     font-size: 20px;
     line-height: 28px;
     margin: 5px 20px;
 }
 
+h2{
+    font-size: 60px;
+    margin: 40px 20px;
+}
+
 h3{
-    font-size: 32px;
+    font-size: 34px;
     margin: 40px 20px;
 }
 
@@ -184,9 +186,32 @@ h4{
 #jumbotron .col p,
 #planning .app-development p,
 .testimonials-intro,
-#testimonials p{
+#testimonials p,
+#benefits h3{
     text-align: center;
     padding-bottom: 30px;
+}
+
+#testimonials h3,
+#benefits h2,
+#benefits h4,
+#about h2,
+#about h3{
+    color: #9792e4;
+}
+
+#testimonials .col-testo p,
+#benefits h3{
+    color: white;
+}
+
+#benefits button,
+#about button{
+    background-color: #9792e4;
+    color: white;
+    font-size: 20px;
+    padding: 10px 50px;
+    margin: 20px;
 }
 
 /*Header*/
@@ -250,28 +275,27 @@ header .menu-mobile{
 
 /*Testimonials*/
 
-#testimonials h3{
-    color: #9792e4;
-}
-
 #testimonials .img{
-    width: 50%;
     display: flex;
     justify-content: center;
 }
 
-#testimonials img{
+#testimonials img,
+#about img{
     border-radius: 50%;
 }
 
-#testimonials .testo p{
-    color: white;
+/*About*/
+
+#about .img{
+    width: 50%;
+    margin-top: 30px;
 }
 
 /* RESPONSIVE */
 
 @media screen and (min-width: 768px){
-    
+
     #testimonials .col,
     #benefits .col,
     #about .row{
@@ -300,33 +324,53 @@ header .menu-mobile{
 
     /*Testimonials*/
 
-    #testimonials .img{
+    #testimonials .col-img{
         width: 30%;
     }
 
-    #testimonials .testo{
+    #testimonials .col-testo{
         width: 70%;
     }
 
-    #testimonials .testo p{
+    #testimonials .col-testo p{
         text-align: left;
     }
+
+    /*Benefits*/
 
     #benefits .col{
         width: calc(50% - 60px);
     }
 
-    #about .testo{
+    /*About*/
+
+    #about .col-testo{
         width: 60%;
+        padding-right: 20px;
     }
 
-    #about .img{
+    #about .col-img{
         width: 40%;
     }
 
 }
 
+@media screen and (min-width: 992px){
+    
+    .sm-container{
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    
+}
+
 @media screen and (min-width: 1200px){
+
+    .container{
+        max-width: 1140px;
+        margin: 0 auto;
+    }
 
     /*Header*/
 
