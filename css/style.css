@@ -144,7 +144,6 @@ footer .col{
 #jumbotron .img,
 #planning .strategic-plan,
 #planning .app-development,
-#testimonials .img,
 #testimonials .testo{
     width: 95%;
     margin: 20px;
@@ -275,14 +274,29 @@ header .menu-mobile{
 
 /*Testimonials*/
 
+#testimonials .col{
+    padding: 20px;
+}
+
 #testimonials .img{
     display: flex;
     justify-content: center;
 }
 
+#testimonials img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #testimonials img,
 #about img{
     border-radius: 50%;
+}
+
+#testimonials .col-img{
+    width: 200px;
+    height: 200px;
 }
 
 /*About*/
@@ -325,11 +339,12 @@ header .menu-mobile{
     /*Testimonials*/
 
     #testimonials .col-img{
-        width: 30%;
+        flex-shrink: 0;
+        overflow: hidden;
     }
 
     #testimonials .col-testo{
-        width: 70%;
+        flex-grow: 1;
     }
 
     #testimonials .col-testo p{
