@@ -8,13 +8,13 @@
 /* LAYOUT CLASSES */
 
 .container{
-    max-width: 1200px;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px;
 }
 
 .sm-container{
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 30px 0;
 }
@@ -22,6 +22,8 @@
 .row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -30px;
+    margin-right: -30px;
 }
 
 
@@ -33,6 +35,24 @@
 
 .justify-between{
     justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.align-end{
+    align-self: flex-end;
+}
+
+img{
+    width: 100%;
+}
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
 }
 
 .bg-blue{
@@ -79,6 +99,10 @@
     padding: 30px 0;
 }
 
+.pd-x-60{
+    padding: 0 60px;
+}
+
 .ps-relative{
     position: relative;
 }
@@ -86,8 +110,15 @@
 
 /* GENERAL CLASSES */
 
+/*Header*/
+
 header .menu-desktop{
     display: none;
+}
+
+header .menu-mobile{
+    color: white;
+    font-size: 28px;
 }
 
 #jumbotron .big-col,
@@ -124,7 +155,7 @@ footer .col{
 
 /* RESPONSIVE */
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 768px){
     
     #jumbotron .big-col,
     #testimonials .col,
@@ -163,7 +194,9 @@ footer .col{
 
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1200px){
+
+    /*Header*/
 
     header .menu-desktop{
         display: block;
@@ -173,15 +206,22 @@ footer .col{
         display: none;
     }
 
+    header ul li{
+        display: inline;
+        list-style-type: none;
+        color: white;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+
+    header button{
+        margin-left: 10px;
+        font-size: 19px;
+    }
+
     #planning .col{
         flex-wrap: nowrap;
         width: calc(50% - 60px);
-    }
-
-    #planning .col:nth-child(2){
-        position: absolute;
-        bottom: 0;
-        right: 0;
     }
 
     #benefits .col{
