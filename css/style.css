@@ -75,14 +75,6 @@ img{
     background-color: #333333;
 }
 
-.pd-y-30{
-    padding: 30px 0;
-}
-
-.pd-x-60{
-    padding: 0 60px;
-}
-
 
 /* GENERAL CLASSES */
 
@@ -173,13 +165,15 @@ h4{
 #benefits h2,
 #benefits h4,
 #about h2,
-#about h3{
+#about h3,
+.boolean{
     color: #9792e4;
 }
 
 #testimonials .col-testo p,
 #benefits h3,
-#get-started .col{
+#get-started .col,
+.privacy{
     color: white;
 }
 
@@ -195,6 +189,11 @@ h4{
 #testimonials h3,
 #get-started h3{
     margin: 0;
+}
+
+#testimonials img,
+#about img{
+    border-radius: 50%;
 }
 
 /*Header*/
@@ -262,6 +261,11 @@ header .menu-mobile{
     padding: 20px;
 }
 
+#testimonials .icon{
+    font-size: 70px;
+    vertical-align: bottom;
+}
+
 #testimonials .img{
     display: flex;
     justify-content: center;
@@ -273,21 +277,29 @@ header .menu-mobile{
     object-fit: cover;
 }
 
-#testimonials img,
-#about img{
-    border-radius: 50%;
-}
-
 #testimonials .col-img{
     width: 200px;
     height: 200px;
+    margin-right: 20px;
+}
+
+#testimonials .name{
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /*About*/
 
 #about .img{
-    width: 50%;
+    width: 70%;
     margin-top: 30px;
+    position: relative;
+}
+
+#about .fa-quote-left{
+    position: absolute;
+    font-size: 90px;
+    color: #9792e4;
 }
 
 /*Get started*/
@@ -321,11 +333,6 @@ footer p{
     color: white;
     font-size: 20px;
     text-align: center;
-}
-
-.violet{
-    color: #9792e4;
-    text-decoration: underline;
 }
 
 /* RESPONSIVE */
