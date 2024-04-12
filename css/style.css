@@ -100,7 +100,10 @@ footer .col{
     border-radius: 20px;
 }
 
-#jumbotron .big-col,
+#jumbotron .big-col{
+    display: grid;
+}
+
 #testimonials .col{
     display: flex;
     flex-wrap: wrap;
@@ -221,8 +224,10 @@ header .menu-mobile{
     margin: 30px 0 40px 20px;
 }
 
-#jumbotron .img{
-    width: 60%;
+#jumbotron img{
+    max-width: 250px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 #jumbotron .col i{
@@ -293,6 +298,9 @@ header .menu-mobile{
 #about .img{
     width: 70%;
     margin-top: 30px;
+}
+
+#about img{
     position: relative;
 }
 
@@ -348,6 +356,8 @@ footer p{
     /*Jumbotron*/
 
     #jumbotron .big-col{
+        display: flex;
+        flex-wrap: wrap;
         width: calc(100% / 3 * 2 - 60px);
     }
 
@@ -355,14 +365,11 @@ footer p{
         width: calc(100% / 3 - 60px);
     }
 
-    #jumbotron .img{
-        display: flex;
-        justify-content: left;
-        width: 90%;
-    }
-
     #jumbotron img{
-        width: 60%;
+        width: 50%;
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-start;
     }
 
     /*Testimonials*/
@@ -444,10 +451,6 @@ footer p{
 
     #jumbotron .big-col{
         flex-wrap: nowrap;
-    }
-
-    #jumbotron img{
-        width: 100%;
     }
 
     /*Planning*/
